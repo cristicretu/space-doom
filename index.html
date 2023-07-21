@@ -1,13 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Svelte + TS</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>DOOM</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div class="container">
+      <div id="dosbox"></div>
+      <button class="wrapper" onclick="dosbox.requestFullScreen();">
+          <a><span>FULLSCREEN</span></a>
+      </button>
+    </div>    
+
+    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript">
+        var dosbox = new Dosbox({
+            id: "dosbox",
+            onload: function (dosbox) {
+                dosbox.run("/public/roms/ultimate-doom.zip", "./UltDoom/DOOM.EXE");
+            },
+            onrun: function (dosbox, app) {
+                console.log("App '" + app + "' is runned");
+            }
+        });
+    </script>
   </body>
 </html>
