@@ -23,7 +23,7 @@ body {
 }
 
 .dosbox-container > .dosbox-overlay {
-  background: url(./public/doom.jpg) center no-repeat;
+  background: url(/doom.jpg) center no-repeat;
   opacity: 0.5;
   background-size: 100%;
 }

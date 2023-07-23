@@ -203,7 +203,7 @@
       this.module.setStatus('Loading js-dos');
       this.ui.updateMessage('Loading js-dos');
 
-      return new Dosbox.Xhr('components/js-dos-apiv3.js', {
+      return new Dosbox.Xhr('/js-dos-apiv3.js', {
         success: (function(_this) {
           return function(script) {
             var func;
