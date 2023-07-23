@@ -2,10 +2,9 @@
 v: 0
 icon: ./public/icon.png
 micros:
- - name: space-doom
+ - name: static-astro-in-space
    src: .
    engine: static
-   primary: true
    commands:
     - npm run build
    serve: dist
